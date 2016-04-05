@@ -3,7 +3,7 @@ var _id = (now + '').slice(-3);
 var ua = navigator.userAgent;
 
 var $ = {
-  _id: id,
+  _id: _id,
   ua: ua,
   /**
    * 当前系统是否为iOS
@@ -174,7 +174,7 @@ function type(obj, type) {
     t = t.substring(8, t.length - 1);
   }
   if (type) {
-    return t === type
+    return t === type.toLowerCase()
   }
   return t;
 }
